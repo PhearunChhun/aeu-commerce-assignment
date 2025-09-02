@@ -1,0 +1,85 @@
+.active{
+    color: rgb(249 115 22);
+}
+.product-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 0.75rem;
+}
+
+.product-card:hover .product-card-overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.btn-buy-now {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.btn-buy-now:hover {
+    cursor: pointer;
+    background-color: #e5e7eb;
+    transform: scale(1.05);
+}
+
+.buy-now-btn {
+    background-color: rgb(249 115 22);
+    /* A dark color from Tailwind's gray palette */
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border-radius: 0.75rem;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.buy-now-btn:hover {
+    background-color: rgb(249, 115, 22,0.9);
+    /* A darker gray for the hover effect */
+    transform: scale(1.05);
+}
+ @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Define the scale-up animation for the image on hover */
+.group:hover .product-image {
+    transform: scale(1.05);
+}
+/* Define the slide-up animation for the button on hover */
+.group:hover .buy-now-btn {
+    transform: translateY(0);
+    opacity: 1;
+}
+.rating-stars i {
+    color: #fca5a5;
+    /* A subtle red/pink color for stars */
+    font-size: 1.25rem;
+}

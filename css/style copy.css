@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.nav-link {
+    color: black;
+}
+
+.nav-link:hover {
+    color: #ff6600;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    /* full screen height */
+    background: url('/img/banner.jpg') no-repeat right center;
+    background-size: cover;
+}
+
+.text-warning {
+    color: #ff6600 !important;
+}
+
+.text-content {
+    max-width: 500px;
+}
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+}
+
+/* .product-card img {
+    border-radius: 1rem;
+} */
+
+/* Fixed dark overlay for product cards */
+.product-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 50% black overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 1rem;
+}
+
+.btn-buy-now {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 2px;
+}
+
+/* product feature section */
+.product-feature .product-card {
+    padding: 0;
+    text-align: center;
+    /* border: 1px solid #e0e0e0; */
+}
+
+.product-feature .product-card img {
+   height: 300px;
+   object-fit: contain;
+}
+
+.product-feature .product-card-body {
+    padding: 1.5rem 1rem;
+}
+
+.product-feature .product-title {
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-feature .product-price {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.rating-stars .bi-star-fill {
+    color: #ffc107;
+    /* Yellow for stars */
+    font-size: 1.2rem;
+}
+
+.product-feature    .buy-now-btn {
+    background-color: #000;
+    color: #fff;
+    border-radius: 0;
+    /* Remove border-radius for square button */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    padding: 0.75rem 2rem;
+    border: none;
+}
+
+#banner {
+    background-image: url('../img/cart_banner.jpg');
+    width: 100%;
+    height: 50vh;
+    background-size: contain;
+    background-position: center;
+    background-position-y: 80px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner h1 {
+    color: #ff6600;
+}
+
+#banner button {
+    background-color: #ff6600;
+}
+
+#banner button:hover {
+    background-color: black;
+}
