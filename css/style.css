@@ -45,18 +45,23 @@
 }
 
 .buy-now-btn {
-    background-color: rgb(249 115 22);
-    /* A dark color from Tailwind's gray palette */
-    color: white;
-    font-weight: bold;
-    padding: 0.75rem 2rem;
-    border-radius: 0.75rem;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    display: inline-block;      
+    width: auto;                 
+    text-align: center;           
+    padding: 0.75rem 1.5rem;      
+    border-radius: 0.75rem; 
+    background-color: #f97316;   
+    color: #ffffff;              
+    font-weight: 700;           
+    transition-property: all;    
+    transition-duration: 300ms;   
+    transition-timing-function: ease-in-out; 
+    transform: translateY(100%);  
+    opacity: 0;                   
 }
 
 .buy-now-btn:hover {
     background-color: rgb(249, 115, 22,0.9);
-    /* A darker gray for the hover effect */
     transform: scale(1.05);
 }
  @keyframes fadeInUp {
