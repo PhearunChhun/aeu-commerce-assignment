@@ -79,17 +79,143 @@
             </div>
         </div>
     </nav>
-    <section class="py-12 px-4">
-        <div class="container mx-auto overflow-hidden grid grid-cols-1 md:grid-cols-2">
-            <div class="w-full flex-col items-center">
-                <div class="w-1/2 mx-auto header mb-10">
-                    <h2 class="text-center text-3xl font-bold text-center">Account info</h2>
-                    <hr class="w-16 mx-auto h-1 bg-orange-500 my-4 rounded-full">
-                    <p class="text-center text-lg font-bold text-black mt-2">Phearun@gmail.com</p>
+    <main class="py-12 md:py-16">
+        <div class="container mx-auto px-4">
+            <!-- Account Layout Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+                <!-- Left Column: Account Info & Navigation -->
+                <div class="lg:col-span-1 p-6 h-fit">
+                    <div class="space-y-3 text-center">
+                        <h2 class="text-xl font-bold text-black">Account Info</h2>
+                        <div class="w-16 h-1 mx-auto bg-orange-500 rounded-full"></div>
+
+                        <div class="space-y-3 text-lg  text-gray-700">
+                            <p class="truncate">
+                                <span class="font-semibold text-gray-800">Name:</span> John Doe
+                            </p>
+                            <p class="truncate">
+                                <span class="font-semibold text-gray-800">Email:</span> info@example.com
+                            </p>
+                        </div>
+
+                        <div class="space-y-3 text-center">
+                            <a href="#orders"
+                                class="block text-orange-500 font-medium hover:text-orange-600 transition-colors duration-200">Your
+                                Orders</a>
+                            <button onclick="console.log('User logged out')"
+                                class="text-red-500 font-medium hover:text-red-600 transition-colors duration-200 focus:outline-none">
+                                Logout
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Columns: Forms and Orders -->
+                <div class="lg:col-span-2 space-y-12">
+                    <!-- Change Password Form -->
+                    <div class="p-6 text-center">
+                        <h2 class="text-xl font-bold text-black mb-3">Change Password</h2>
+                        <div class="w-16 h-1 mx-auto bg-orange-500 rounded-full mb-3"></div>
+
+                        <form id="change-password-form" class="space-y-3">
+                            <div>
+                                <label for="new-password"
+                                    class="block text-md font-bold text-black mb-2">Password</label>
+                                <input type="password" id="new-password" name="new-password" required
+                                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500">
+                            </div>
+
+                            <div>
+                                <label for="confirm-password" class="block text-md font-bold text-black mb-2">Confirm
+                                    Password</label>
+                                <input type="password" id="confirm-password" name="confirm-password" required
+                                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500">
+                            </div>
+
+                            <!-- Validation Message (as seen in the image) -->
+                            <div id="password-validation" class="hidden text-sm text-red-500 mt-2">
+                                Please fill out this field.
+                            </div>
+
+                            <button type="submit"
+                                class="w-full md:w-auto px-6 py-3 text-lg font-semibold text-white bg-orange-500 rounded-xl hover:bg-orange-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.01]">
+                                Change Password
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Your Orders Section -->
+
+
+                </div>
+
+            </div>
+            <div id="orders" class="">
+                <h2 class="text-xl font-bold text-black text-center mb-3">Your Orders</h2>
+                <div class="w-16 h-1 mx-auto bg-orange-500 mb-3 rounded-full"></div>
+                <!-- Order Table/List -->
+                <div class="overflow-x-auto rounded-xl shadow-lg border border-gray-100">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead>
+                            <tr>
+                                <th
+                                    class="px-6 py-4 text-left text-sm font-semibold text-white bg-orange-500">
+                                    Product
+                                </th>
+                                <th
+                                    class="px-6 py-4 text-right text-sm font-semibold text-white bg-orange-500">
+                                    Date
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <!-- Sample Order Row 1 -->
+                            <tr class="hover:bg-gray-50 transition-colors duration-150">
+                                <td
+                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-black flex items-center space-x-4">
+                                    <!-- Product Image Placeholder -->
+                                    <img src="../img/shoes.jpg" alt="White Shoes"
+                                        class="w-10 h-10 object-cover rounded-md">
+                                    <span>White Shoes</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">
+                                    2023-01-01
+                                </td>
+                            </tr>
+                            <!-- Sample Order Row 2 -->
+                            <tr class="hover:bg-gray-50 transition-colors duration-150">
+                                <td
+                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-black flex items-center space-x-4">
+                                    <!-- Product Image Placeholder -->
+                                    <img src="../img/bag.jpg" alt="Blue Backpack"
+                                        class="w-10 h-10 object-cover rounded-md">
+                                    <span>Blue Backpack</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">
+                                    2023-01-05
+                                </td>
+                            </tr>
+                            <!-- Sample Order Row 3 -->
+                            <tr class="hover:bg-gray-50 transition-colors duration-150">
+                                <td
+                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-black flex items-center space-x-4">
+                                    <!-- Product Image Placeholder -->
+                                    <img src="../img/shirt.jpg" alt="Leather Jacket"
+                                        class="w-10 h-10 object-cover rounded-md">
+                                    <span>Leather Jacket</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">
+                                    2023-01-10
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
+
     <!-- footer -->
     <footer class="bg-black text-white px-6 md:px-10 py-5">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
